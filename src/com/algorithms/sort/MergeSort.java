@@ -28,6 +28,7 @@ public class MergeSort {
         sort(a,mid+1,hi);
         merge(a,lo,mid,hi);
     }
+    //原地归并
    public static void merge(Comparable[] a,int lo,int mid,int hi){
        //首先我们用一个辅助数组来复制原数组的内容
        int i = lo,j=mid+1;

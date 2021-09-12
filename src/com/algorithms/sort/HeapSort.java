@@ -1,5 +1,4 @@
 package com.algorithms.sort;
 
-public class MaxPQImp {
-
+public class HeapSort {
 }

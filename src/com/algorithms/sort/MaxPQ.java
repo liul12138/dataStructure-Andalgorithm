@@ -5,5 +5,4 @@ public interface MaxPQ<K extends Comparable<K>> {
     K max();
     K delMax();
     boolean isEmpty();
-    int size();
-}
+    int size();}
