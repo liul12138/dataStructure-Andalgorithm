@@ -5,6 +5,7 @@ package com.algorithms.graph;
  * N个顶点，找出N-1条边生成Minimum Cost Spanning Tree
  * prime 算法和 迪捷斯卡算法其实本质上只是有向和无项图的操作区别
  * 利用切分定理，
+ todo 实现prime算法
  *
  */
 public class PrimeMST {

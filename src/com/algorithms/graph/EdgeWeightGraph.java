@@ -1,14 +1,16 @@
 package com.algorithms.graph;
 
+
 public class EdgeWeightGraph{
     private final int V;//顶点总数
     private int E;//边的总数
-    private BagImp<Edge>[] adj;//图的邻接矩阵
+    private final BagImp<Edge>[] adj;//图的邻接矩阵
     public EdgeWeightGraph(int v){
         this.V = v;
+        adj = new BagImp[v];
         E = 0;
         for(int i = 0;i<v;i++){
-            adj[i] = new BagImp<Edge>();
+            adj[i] = new BagImp<>();
         }
     }
 
@@ -23,7 +25,7 @@ public class EdgeWeightGraph{
 
     /**
      * 添加边到图中
-     * @param edge
+     * @param edge 添加的边
      */
 
     public void addEdge(Edge edge){
@@ -43,5 +45,16 @@ public class EdgeWeightGraph{
         return adj[v];
     }
 
+    public Iterable<Edge> edges(){
+        Bag<Edge> b = new BagImp<>();
+        for(int v=0;v<V;v++){
+            for(Edge e:adj(v)){
+                if(e.other(v)>v){
+                    b.add(e);
+                }
+            }
+        }
+        return b;
+    }
 
 }

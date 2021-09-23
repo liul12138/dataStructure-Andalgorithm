@@ -14,6 +14,7 @@ public class UF {
         }
 
      }
+
      void union(int p,int q){
        int pId = find(p);
        int qId = find(q);
@@ -21,7 +22,12 @@ public class UF {
            return;
        }
        else {
-
+           //将p的分量重新命名为q的名称
+        for(int i=0;i<ids.length;i++){
+            if(ids[i]==pId){
+                ids[i] = qId;
+            }
+        }
        }
      }
      int find(int p){

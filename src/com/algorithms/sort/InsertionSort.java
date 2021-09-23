@@ -10,6 +10,7 @@ public class InsertionSort {
      * 基本思路：循环插入
      * @param a 排序数组
      */
+    //即分为排序部分和未排序部分麻将未排序部分的元素以此插入到已排序部分的适当位置
     public static void sort(Comparable[] a){
         for (int i = 1; i < a.length; i++) {
             //发现插入的数比原来数值要小

@@ -2,7 +2,7 @@ package com.algorithms.graph;
 
 import java.util.Iterator;
 
-public class BagImp<T> implements Iterable<T>, Bag<T> {
+public class BagImp<T> implements  Bag<T> {
     //首指针
     private Node first;
     private int count;

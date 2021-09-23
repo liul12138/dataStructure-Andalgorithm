@@ -2,6 +2,8 @@ package com.algorithms.dataStruct;
 
 import com.algorithms.sort.Sort;
 
+import java.util.Iterator;
+
 public class MinPQImp<K extends Comparable<K>> implements PQ<K> {
 
     private K[] pq; //基于堆的完全二叉树
@@ -11,7 +13,13 @@ public class MinPQImp<K extends Comparable<K>> implements PQ<K> {
         pq =  (K[])new Comparable[maxN+1];
 
     }
-
+    public MinPQImp(Iterable<K> items){
+        Iterator<K> iter = items.iterator();
+        int cnt = 0;
+        while (iter.hasNext()){
+            pq[cnt] = iter.next();
+        }
+    }
 
     private void swim(int k){
         while(k>1&& Sort.less(pq[k],pq[k/2])){

@@ -10,7 +10,7 @@ public class LazyPrimeMST {
     private Queue<Edge> mst;//最小生成树的边
     private MinPQImp<Edge> pq;
     public LazyPrimeMST(EdgeWeightGraph G){
-        pq = new MinPQImp<Edge>(8);
+        pq = new MinPQImp<Edge>(G.edges());
         marked = new boolean[G.V()];
         mst = new ArrayDeque<>();
         visit(G,0);
